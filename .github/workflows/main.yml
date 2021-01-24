@@ -3,11 +3,13 @@ name: CI
 on:
   push:
     branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
   workflow_dispatch:
 
 jobs:
-  build:
+  unit-test:
     runs-on: ubuntu-latest
 
     steps:
